@@ -6,7 +6,8 @@ RUN pip install grpcio --ignore-installed && \
     apt install -y build-essential autoconf libtool pkg-config && \
     apt install -y libgflags-dev libgtest-dev && \
     git clone https://github.com/grpc/grpc.git && \
-    cd grpc && git submodule update --init \
+    cd grpc && \
+	git submodule update --init && \
     make grpc_cli && \
 	cp /grpc/bins/opt/grpc_cli /usr/local/bin/
 
