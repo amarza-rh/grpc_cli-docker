@@ -12,4 +12,4 @@ RUN pip install grpcio --ignore-installed && \
 	cp /grpc/bins/opt/grpc_cli /usr/local/bin/ && \
 	cd ../ && rm -rf grpc
 
-ENTRYPOINT /usr/local/bin/grpc_cli
+ENTRYPOINT ["/usr/local/bin/grpc_cli"]
