@@ -9,6 +9,7 @@ RUN pip install grpcio --ignore-installed && \
     cd grpc && \
 	git submodule update --init && \
     make grpc_cli && \
-	cp /grpc/bins/opt/grpc_cli /usr/local/bin/
+	cp /grpc/bins/opt/grpc_cli /usr/local/bin/ && \
+	cd ../ && rm -rf grpc
 
 ENTRYPOINT /usr/local/bin/grpc_cli
