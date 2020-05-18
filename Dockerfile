@@ -14,4 +14,5 @@ RUN pip install grpcio --ignore-installed && \
 
 RUN pip install jq
 
-ENTRYPOINT ["/usr/local/bin/grpc_cli"]
+# grpc_cli is at /usr/local/bin/grpc_cli
+ENTRYPOINT ["/bin/sh", "-c"]
